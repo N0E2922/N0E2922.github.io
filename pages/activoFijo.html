@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activo Fijo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-gallery { margin-top: 4rem; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+            background: var(--card);
+            cursor: pointer; 
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover; 
+            display: block;
+        }
+        .lightbox {
+            display: none; 
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item img { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container section">
+        <a href="../index.html#proyectos" class="back-btn"><i data-lucide="arrow-left"></i> Volver a proyectos</a>
+        
+        <div class="project-detail-content">
+            <div class="project-info">
+                <span class="badge">Administrativo</span>
+                <h1>Gestión de Activo Fijo</h1>
+                <p>Desarrollo de un sistema web para la administración y control de activos institucionales. Permite el registro, asignación y seguimiento de bienes, control de movimientos y verificaciones físicas
+                     en la Caja Mutual de los Empleados del MINED.</p>
+                <br>
+                <p>Elaboración de manual técnico y manual de programador para documentación del sistema.</p>
+                <br>
+                <p><strong>Tecnologías utilizadas:</strong> PHP, Laravel, Filament, MySQL, XAMPP, Fedora Linux.</p>
+                <ul class="features-list">
+                    <li><i data-lucide="check-circle"></i> Operaciones CRUD para gestión de activos.</li>
+                    <li><i data-lucide="check-circle"></i> Cálculo automático de depreciación contable.</li>
+                    <li><i data-lucide="check-circle"></i> Generación de reportes PDF.</li>
+                    <li><i data-lucide="check-circle"></i> Control de movimientos de bienes.</li>
+                    <li><i data-lucide="check-circle"></i> Gestión de usuarios y roles</li>
+                </ul>
+            </div>
+            <div class="hero-img">
+                <div class="img-wrapper"><img src="../assets/img/mockup1.png" alt="Preview"></div>
+            </div>
+        </div>
+
+        <div class="project-gallery">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Pruebas del Proyecto</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="../assets/img/s1.png" alt="Prueba 1"></div>
+                <div class="gallery-item"><img src="../assets/img/s2.png" alt="Prueba 2"></div>
+                <div class="gallery-item"><img src="../assets/img/s3.png" alt="Prueba 3"></div>
+                <div class="gallery-item"><img src="../assets/img/s4.png" alt="Prueba 4"></div>
+                <div class="gallery-item"><img src="../assets/img/s5.png" alt="Prueba 5"></div>
+                <div class="gallery-item"><img src="../assets/img/s6.png" alt="Prueba 6"></div>
+                <div class="gallery-item"><img src="../assets/img/s7.png" alt="Prueba 7"></div>
+                <div class="gallery-item"><img src="../assets/img/s8.png" alt="Prueba 8"></div>
+                <div class="gallery-item"><img src="../assets/img/s9.png" alt="Prueba 9"></div>
+                <div class="gallery-item"><img src="../assets/img/s10.png" alt="Prueba 10"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <img src="" alt="Full Image" id="lightboxImg">
+    </div>
+
+    <script>
+        lucide.createIcons();
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeLightbox');
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+
+        galleryItems.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src; 
+            });
+        });
+        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

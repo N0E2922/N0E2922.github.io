@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burguezza App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-gallery { margin-top: 4rem; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+            background: var(--card);
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover; 
+            display: block;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item img { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container section">
+        <a href="../index.html#proyectos" class="back-btn"><i data-lucide="arrow-left"></i> Volver a proyectos</a>
+        
+        <div class="project-detail-content">
+            <div class="project-info">
+                <span class="badge">Delivery</span>
+                <h1>Burguezza App</h1>
+                <p>Plataforma de pedidos a domicilio que conecta a los clientes con una interfaz rápida hecha en Ionic y un backend en Laravel robusto para la gestión de órdenes.</p>
+                <br>
+                <p><strong>Tecnologías utilizadas:</strong> Laravel, Php, Ionic, MySQL.</p>
+                <ul class="features-list">
+                    <li><i data-lucide="check-circle"></i> Catálogo dinámico con categorías, buscador de productos en tiempo real y gestión interactiva de carrito de compras.</li>
+                    <li><i data-lucide="check-circle"></i> Sistema de autenticación de usuarios, historial de pedidos y un flujo de checkout con cálculo automático de impuestos y envío.</li>
+                    <li><i data-lucide="check-circle"></i> Panel para el control total de productos(CRUD), gestión de imágenes y administración de estados de órdenes.</li>
+                     <li><i data-lucide="check-circle"></i> Integración de una API REST para la sincronización inmediata entre la base de datos y la aplicación móvil.</li>
+                </ul>
+
+                <div class="hero-social-main">
+                    <a href="https://github.com/N0E2922/Vista-App" class="social-btn github"><i data-lucide="github"></i> Repositorio Ionic</a>
+                    <a href="https://github.com/N0E2922/Laravel-Api" class="social-btn github"><i data-lucide="github"></i> Repositorio Laravel</a>
+                </div>
+                
+            </div>
+            <div class="hero-img">
+                <div class="img-wrapper"><img src="../assets/img/mockup2.png" alt="Preview"></div>
+            </div>
+        </div>
+        <div class="project-gallery">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Capturas del Proyecto</h2>
+            <p style="color: var(--text-muted);">Visualización de la interfaz de usuario y flujo de pedidos.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="../assets/img/1.png" alt="Prueba 1"></div>
+                <div class="gallery-item"><img src="../assets/img/2.png" alt="Prueba 2"></div>
+                <div class="gallery-item"><img src="../assets/img/3.png" alt="Prueba 3"></div>
+                <div class="gallery-item"><img src="../assets/img/4.png" alt="Prueba 4"></div>
+                <div class="gallery-item"><img src="../assets/img/5.png" alt="Prueba 5"></div>
+                <div class="gallery-item"><img src="../assets/img/6.png" alt="Prueba 6"></div>
+                <div class="gallery-item"><img src="../assets/img/7.png" alt="Prueba 7"></div>
+                <div class="gallery-item"><img src="../assets/img/8.png" alt="Prueba 8"></div>
+                <div class="gallery-item"><img src="../assets/img/9.png" alt="Prueba 9"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <img src="" alt="Imagen Completa" id="lightboxImg">
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeLightbox');
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+
+        galleryItems.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

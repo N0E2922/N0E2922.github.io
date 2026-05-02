@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Restaurante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-gallery { margin-top: 4rem; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+            background: var(--card);
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover; 
+            display: block;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item img { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container section">
+        <a href="../index.html#proyectos" class="back-btn"><i data-lucide="arrow-left"></i> Volver a proyectos</a>
+        
+        <div class="project-detail-content">
+            <div class="project-info">
+                <span class="badge">Gestión</span>
+                <h1>Sistema de Restaurante</h1>
+                <p>Este sistema Burguezza, esta diseñada para la 
+                    gestión administrativa y operativa de un restaurante. Su objetivo principal es digitalizar y organizar el flujo de trabajo, 
+                    desde que un cliente llega a la mesa hasta que se emite la factura final.</p>
+                <br>
+                <p><strong>Tecnologías utilizadas:</strong> Laravel, Php, MySQL.</p>
+                <ul class="features-list">
+                    <li><i data-lucide="check-circle"></i> Permite crear y editar el menú, detallando qué ingredientes componen cada platillo.</li>
+                    <li><i data-lucide="check-circle"></i> Creación de pedidos por mesa y seguimiento de su estado (preparación/entrega).</li>
+                    <li><i data-lucide="check-circle"></i> Administrador: Supervisa el Dashboard, inventarios, ingredientes, categorias, genera reportes y 
+                        crear nuevas cuentas de usuario.</li>
+                    <li><i data-lucide="check-circle"></i> Mesero: Agiliza la toma de pedidos y la asignación de mesas.</li>
+                    <li><i data-lucide="check-circle"></i> Cajero: Asegura un cobro exacto y una facturación organizada.</li>
+                    <li><i data-lucide="check-circle"></i> Permite crear y editar el menú, detallando qué ingredientes componen cada platillo.</li>
+                    <li><i data-lucide="check-circle"></i> Reduce errores en la toma de pedidos y agiliza la comunicación entre el salón y la administración.</li>
+                </ul>
+
+                <div class="hero-social-main">
+                    <a href="https://github.com/N0E2922/Sistema-de-Restaurante-Burguezza" class="social-btn github"><i data-lucide="github"></i> Repositorio</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="img-wrapper"><img src="../assets/img/mockup3.png" alt="Preview"></div>
+            </div>
+        </div>
+        <div class="project-gallery">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Módulos del Sistema</h2>
+            <p style="color: var(--text-muted);">Capturas detalladas de la gestión de correlativos y reportes.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="../assets/img/a1.png" alt="Módulo 1"></div>
+                <div class="gallery-item"><img src="../assets/img/a2.png" alt="Módulo 2"></div>
+                <div class="gallery-item"><img src="../assets/img/a3.png" alt="Módulo 3"></div>
+                <div class="gallery-item"><img src="../assets/img/a4.png" alt="Módulo 4"></div>
+                <div class="gallery-item"><img src="../assets/img/a5.png" alt="Módulo 5"></div>
+                <div class="gallery-item"><img src="../assets/img/a6.png" alt="Módulo 6"></div>
+                <div class="gallery-item"><img src="../assets/img/a7.png" alt="Módulo 7"></div>
+                <div class="gallery-item"><img src="../assets/img/a8.png" alt="Módulo 8"></div>
+                <div class="gallery-item"><img src="../assets/img/a9.png" alt="Módulo 9"></div>
+                <div class="gallery-item"><img src="../assets/img/a10m.png" alt="Módulo 10"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <img src="" alt="Vista Previa" id="lightboxImg">
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeLightbox');
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+
+        galleryItems.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
