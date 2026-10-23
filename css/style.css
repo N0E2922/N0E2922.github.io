@@ -84,6 +84,10 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .project-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; flex-grow: 1; }
 .project-body h3 { font-size: 1.25rem; color: var(--text); }
 .project-body p { color: var(--text-muted); font-size: 0.9rem; }
+.project-tech-tags { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: .25rem; }
+.project-tech-tags > span { display: inline-flex; align-items: center; gap: .4rem; padding: .45rem .7rem; border: 1px solid var(--border); border-radius: 999px; color: var(--text); background: color-mix(in srgb, var(--accent) 8%, var(--card)); font-size: .78rem; font-weight: 600; transition: border-color .2s ease, transform .2s ease; }
+.project-tech-tags > span:hover { transform: translateY(-2px); border-color: var(--accent); }
+.project-tech-tags svg { width: 15px; height: 15px; color: var(--accent); stroke-width: 2; }
 
 .project-actions { display: flex; gap: 10px; margin-top: auto; padding-top: 10px; }
 
