@@ -68,6 +68,24 @@
         <div class="container">
             <h2 class="section-title">Experiencia Profesional</h2>
             <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Agosto 2026 — Actualidad</span>
+                        <h3>Técnico Informático</h3>
+                        <span class="company">Secretaría de Innovación de la Presidencia</span>
+                        <p> Responsable del desarrollo, implementación y mantenimiento de aplicaciones y 
+                            sistemas informáticos, contribuyendo a la mejora continua de las soluciones 
+                            tecnológicas institucionales. Encargado de desarrollar nuevas funcionalidades, 
+                            realizar mejoras y brindar soporte técnico a los sistemas existentes.
+                        </p>
+                        <br>
+                        <div class="tech-tags">
+                            <span>PhP<span> </span>Laravel</span> <span> Vue.js </span><span>Postgresql</span>  <span>Node.js</span>  <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -101,7 +119,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="date">Abril 2023 — Julio 2023</span>
-                        <h3>Diseñador de Bases de Datos (Pasante)</h3>
+                        <h3>Diseñador de Bases de Datos (Practica Profesional)</h3>
                         <span class="company">Empresa CITYLAB</span>
                         <p>Gestión y documentación de proyectos de bases de datos, modelado ER/UML y ejecución de consultas complejas en SQL Server.</p>
                         <br>
@@ -226,30 +244,68 @@
     <!--EDUCACIÓN-->
     <section id="educacion" class="section reveal">
         <div class="container">
-            <div class="edu-flex">
-                <div class="edu-col">
-                    <h2 class="section-title">Educación</h2>
-                    <div class="edu-item">
-                        <h4>Técnico en Ingeniería de Desarrollo de Software</h4>
-                        <p>ITCA-FAPEDE (2024-2025)</p>
+            <h2 class="section-title">Educación</h2>
+            <div class="education-grid">
+                <article class="education-card">
+                    <i data-lucide="graduation-cap" aria-hidden="true"></i>
+                    <div>
+                        <span class="education-period">2024–2025</span>
+                        <h3>Técnico en Ingeniería de Desarrollo de Software</h3>
+                        <p>ITCA-FAPEDE</p>
                     </div>
-                    <br>
-                    <br>
-                    <div class="edu-item">
-                        <h4>Bachillerato Técnico Vocacional en Desarrollo de Software</h4>
-                        <p>Instituto Nacional Técnico Industrial INTI (2021-2023)</p>
+                </article>
+                <article class="education-card">
+                    <i data-lucide="graduation-cap" aria-hidden="true"></i>
+                    <div>
+                        <span class="education-period">2021–2023</span>
+                        <h3>Bachillerato Técnico Vocacional en Desarrollo de Software</h3>
+                        <p>Instituto Nacional Técnico Industrial (INTI)</p>
                     </div>
-                </div>
-                <div class="edu-col">
-                    <h2 class="section-title">Certificaciones</h2>
-                    <ul class="cert-list">
-                        <li><i data-lucide="award"></i> Diplomado Mantenimiento Hardware (2020)</li>
-                        <li><i data-lucide="award"></i> Diplomado en Creacion de Paginas web (2020)</li>
-                        <li><i data-lucide="award"></i> Fundamentos Básicos de Python (2023)</li>
-                        <li><i data-lucide="award"></i> CCNA: Introducción a Redes (2023-2024)</li>
-                    </ul>
-                </div>
+                </article>
             </div>
+
+            <div class="certifications-heading">
+                <h2 class="section-title">Certificaciones</h2>
+                <span class="cert-count" id="certCount" aria-live="polite"></span>
+            </div>
+            <ul class="cert-list">
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>Clean Code</h3><span class="cert-year">ESIT · 2026</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>AI Fundamentals: Foundations for Understanding AI</h3><span class="cert-year">IBM · 2026</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>Understanding Cloud Computing</h3><span class="cert-year">DataCamp · 2026</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>Desarrollo web con PHP y Laravel</h3><span class="cert-year">ESIT · 2026</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>Introduction to AI for Work</h3><span class="cert-year">DataCamp · 2026</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>CCNA: Introducción a redes</h3><span class="cert-year">Cisco . 2024–2023</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>Fundamentos básicos de Python</h3><span class="cert-year">Cisco . 2023</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>Diplomado en mantenimiento de hardware</h3><span class="cert-year">2020</span></div>
+                </li>
+                <li class="cert-card">
+                    <i data-lucide="award" aria-hidden="true"></i>
+                    <div><h3>Diplomado en creación de páginas web</h3><span class="cert-year">2020</span></div>
+                </li>
+            </ul>
         </div>
     </section>
 </main>

@@ -1,5 +1,11 @@
 lucide.createIcons();
 
+const certificateCount = document.querySelectorAll(".cert-card").length;
+const certificateCountLabel = document.getElementById("certCount");
+if (certificateCountLabel) {
+    certificateCountLabel.textContent = `${certificateCount} ${certificateCount === 1 ? "certificación" : "certificaciones"}`;
+}
+
 const themeBtn = document.getElementById("themeToggle");
 const themeStorageKey = "noe2922-theme";
 const setTheme = (isLight) => {

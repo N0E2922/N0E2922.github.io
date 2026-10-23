@@ -110,9 +110,18 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
 .skill-card { background: var(--card); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border); text-align: center; }
 .skill-card i { color: var(--accent); margin-bottom: 10px; }
-.edu-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-.cert-list { list-style: none; }
-.cert-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; color: var(--text-muted); }
+.education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 1.25rem; margin-bottom: 3.5rem; }
+.education-card, .cert-card { display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--card); }
+.education-card > i, .cert-card > i { flex: 0 0 auto; width: 22px; color: var(--accent); }
+.education-card h3, .cert-card h3 { margin: .25rem 0 .5rem; color: var(--text); font-size: 1rem; line-height: 1.45; }
+.education-card p { color: var(--text-muted); }
+.education-period, .cert-year { color: var(--accent); font-size: .85rem; font-weight: 600; }
+.certifications-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.certifications-heading .section-title { margin-bottom: 1.5rem; }
+.cert-count { color: var(--text-muted); font-size: .9rem; }
+.cert-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1rem; list-style: none; }
+.cert-card { min-height: 112px; transition: transform .2s ease, border-color .2s ease; }
+.cert-card:hover { transform: translateY(-3px); border-color: var(--accent); }
 
 /* Proyecto */
 .back-btn {
@@ -150,7 +159,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 
 
 @media (max-width: 768px) {
-    .hero-content, .edu-flex, .project-detail-content { grid-template-columns: 1fr; }
+    .hero-content, .project-detail-content { grid-template-columns: 1fr; }
     .hero-text h1 { font-size: 2.2rem; }
     .nav { position: relative; }
     .menu-toggle { display: inline-flex; }
@@ -159,6 +168,8 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
     #menu a { margin: 0; padding: .75rem; }
     .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
     .gallery-item img { height: 250px; }
+    .certifications-heading { align-items: flex-start; flex-direction: column; gap: 0; }
+    .certifications-heading .section-title { margin-bottom: .5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
