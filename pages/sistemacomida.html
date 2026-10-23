@@ -77,9 +77,7 @@
             <div class="project-info">
                 <span class="badge">Gestión</span>
                 <h1>Sistema de Restaurante</h1>
-                <p>Este sistema Burguezza, esta diseñada para la 
-                    gestión administrativa y operativa de un restaurante. Su objetivo principal es digitalizar y organizar el flujo de trabajo, 
-                    desde que un cliente llega a la mesa hasta que se emite la factura final.</p>
+                <p>Sistema Burguezza diseñado para organizar la operación del restaurante, desde la creación de pedidos por mesa hasta la emisión de la factura.</p>
                 <br>
                 <p><strong>Tecnologías utilizadas:</strong> Laravel, Php, MySQL.</p>
                 <ul class="features-list">
@@ -89,7 +87,6 @@
                         crear nuevas cuentas de usuario.</li>
                     <li><i data-lucide="check-circle"></i> Mesero: Agiliza la toma de pedidos y la asignación de mesas.</li>
                     <li><i data-lucide="check-circle"></i> Cajero: Asegura un cobro exacto y una facturación organizada.</li>
-                    <li><i data-lucide="check-circle"></i> Permite crear y editar el menú, detallando qué ingredientes componen cada platillo.</li>
                     <li><i data-lucide="check-circle"></i> Reduce errores en la toma de pedidos y agiliza la comunicación entre el salón y la administración.</li>
                 </ul>
 
@@ -119,32 +116,10 @@
             </div>
         </div>
     </div>
-    <div class="lightbox" id="lightbox">
-        <span class="close-lightbox" id="closeLightbox">&times;</span>
-        <img src="" alt="Vista Previa" id="lightboxImg">
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada" aria-hidden="true" tabindex="-1">
+        <button class="close-lightbox" id="closeLightbox" type="button" aria-label="Cerrar vista ampliada">&times;</button>
+        <img src="" alt="" id="lightboxImg">
     </div>
-
-    <script>
-        lucide.createIcons();
-
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const closeBtn = document.getElementById('closeLightbox');
-        const galleryItems = document.querySelectorAll('.gallery-item img');
-
-        galleryItems.forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.classList.add('active');
-                lightboxImg.src = img.src;
-            });
-        });
-
-        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-        lightbox.addEventListener('click', (e) => {
-            if (e.target !== lightboxImg) {
-                lightbox.classList.remove('active');
-            }
-        });
-    </script>
+    <script src="../js/gallery.js"></script>
 </body>
 </html>

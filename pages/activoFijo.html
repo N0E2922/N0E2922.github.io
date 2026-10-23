@@ -112,30 +112,10 @@
             </div>
         </div>
     </div>
-    <div class="lightbox" id="lightbox">
-        <span class="close-lightbox" id="closeLightbox">&times;</span>
-        <img src="" alt="Full Image" id="lightboxImg">
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada" aria-hidden="true" tabindex="-1">
+        <button class="close-lightbox" id="closeLightbox" type="button" aria-label="Cerrar vista ampliada">&times;</button>
+        <img src="" alt="" id="lightboxImg">
     </div>
-
-    <script>
-        lucide.createIcons();
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const closeBtn = document.getElementById('closeLightbox');
-        const galleryItems = document.querySelectorAll('.gallery-item img');
-
-        galleryItems.forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.classList.add('active');
-                lightboxImg.src = img.src; 
-            });
-        });
-        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-        lightbox.addEventListener('click', (e) => {
-            if (e.target !== lightboxImg) {
-                lightbox.classList.remove('active');
-            }
-        });
-    </script>
+    <script src="../js/gallery.js"></script>
 </body>
 </html>
