@@ -135,7 +135,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 }
 
 /* ============================================================
-   TECNOLOGÍAS (logo + nombre) — chips reutilizables
+   TECNOLOGÍAS
    ============================================================ */
 .tech-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
 .tech {
