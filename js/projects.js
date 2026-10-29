@@ -4,30 +4,30 @@
             title: "Sistema de Gestión de Activo Fijo",
             summary: "Control de bienes, depreciación automática y reportes contables en PDF.",
             category: "Sistema web",
-            image: "assets/img/mockup1.webp",
+            image: "assets/img/activo-portada.webp",
             page: "pages/activoFijo.html",
             technologies: ["php", "laravel", "filament", "mysql"],
-            gallery: ["s1.webp", "s2.webp", "s3.webp", "s4.webp", "s5.webp", "s6.webp", "s7.webp", "s8.webp", "s9.webp", "s10.webp"]
+            gallery: ["activo-01.webp", "activo-02.webp", "activo-03.webp", "activo-04.webp", "activo-05.webp", "activo-06.webp", "activo-07.webp", "activo-08.webp", "activo-09.webp", "activo-10.webp"]
         },
         delivery: {
             title: "App Delivery (Burguezza)",
             summary: "App de pedidos a domicilio con API REST integrada y panel administrativo.",
             category: "App móvil",
-            image: "assets/img/mockup2.webp",
+            image: "assets/img/app-portada.webp",
             page: "pages/appDelivery.html",
             repository: "https://github.com/N0E2922/Laravel-Api",
             technologies: ["php", "laravel", "ionic", "mysql"],
-            gallery: ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp"]
+            gallery: ["app-pedido-01.webp", "app-pedido-02.webp", "app-pedido-03.webp", "app-pedido-04.webp", "app-pedido-05.webp", "app-pedido-06.webp", "app-pedido-07.webp", "app-pedido-08.webp", "app-pedido-09.webp"]
         },
         restaurante: {
             title: "Sistema de Restaurante BURGUEZZA",
             summary: "Gestión de las operaciones administrativas y el servicio diario de un restaurante.",
             category: "Sistema web",
-            image: "assets/img/mockup3.webp",
+            image: "assets/img/restaurante-portada.webp",
             page: "pages/sistemacomida.html",
             repository: "https://github.com/N0E2922/Sistema-de-Restaurante-Burguezza",
             technologies: ["php", "laravel", "mysql"],
-            gallery: ["a1.webp", "a2.webp", "a3.webp", "a4.webp", "a5.webp", "a6.webp", "a7.webp", "a8.webp", "a9.webp", "a10m.webp"]
+            gallery: ["restaurante-01.webp", "restaurante-02.webp", "restaurante-03.webp", "restaurante-04.webp", "restaurante-05.webp", "restaurante-06.webp", "restaurante-07.webp", "restaurante-08.webp", "restaurante-09.webp", "restaurante-10.webp"]
         }
     };
 
