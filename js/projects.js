@@ -4,30 +4,30 @@
             title: "Sistema de Gestión de Activo Fijo",
             summary: "Control de bienes, depreciación automática y reportes contables en PDF.",
             category: "Sistema web",
-            image: "assets/img/mockup1.png",
+            image: "assets/img/mockup1.webp",
             page: "pages/activoFijo.html",
             technologies: ["php", "laravel", "filament", "mysql"],
-            gallery: ["s1.png", "s2.png", "s3.png", "s4.png", "s5.png", "s6.png", "s7.png", "s8.png", "s9.png", "s10.png"]
+            gallery: ["s1.webp", "s2.webp", "s3.webp", "s4.webp", "s5.webp", "s6.webp", "s7.webp", "s8.webp", "s9.webp", "s10.webp"]
         },
         delivery: {
             title: "App Delivery (Burguezza)",
             summary: "App de pedidos a domicilio con API REST integrada y panel administrativo.",
             category: "App móvil",
-            image: "assets/img/mockup2.png",
+            image: "assets/img/mockup2.webp",
             page: "pages/appDelivery.html",
             repository: "https://github.com/N0E2922/Laravel-Api",
             technologies: ["php", "laravel", "ionic", "mysql"],
-            gallery: ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png"]
+            gallery: ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp"]
         },
         restaurante: {
             title: "Sistema de Restaurante BURGUEZZA",
             summary: "Gestión de las operaciones administrativas y el servicio diario de un restaurante.",
             category: "Sistema web",
-            image: "assets/img/mockup3.png",
+            image: "assets/img/mockup3.webp",
             page: "pages/sistemacomida.html",
             repository: "https://github.com/N0E2922/Sistema-de-Restaurante-Burguezza",
             technologies: ["php", "laravel", "mysql"],
-            gallery: ["a1.png", "a2.png", "a3.png", "a4.png", "a5.png", "a6.png", "a7.png", "a8.png", "a9.png", "a10m.png"]
+            gallery: ["a1.webp", "a2.webp", "a3.webp", "a4.webp", "a5.webp", "a6.webp", "a7.webp", "a8.webp", "a9.webp", "a10m.webp"]
         }
     };
 
