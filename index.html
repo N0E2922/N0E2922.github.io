@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noé Vladimir Meléndez Méndez | Software Developer</title>
+    <meta name="description" content="Portafolio de Noé Vladimir Meléndez Méndez, desarrollador de software especializado en aplicaciones web, Laravel y bases de datos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://n0e2922.github.io/">
+    <meta property="og:title" content="Noé Vladimir Meléndez Méndez | Software Developer">
+    <meta property="og:description" content="Experiencia, habilidades y proyectos de desarrollo de software de Noé Meléndez.">
+    <meta property="og:image" content="https://n0e2922.github.io/assets/img/perfil.png">
+    <meta name="twitter:image" content="https://n0e2922.github.io/assets/img/perfil.png">
+    <link rel="canonical" href="https://n0e2922.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.468.0"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -270,75 +281,7 @@
             <h2 class="section-title">Proyectos Destacados</h2>
             <p class="section-sub">Sistemas reales que he diseñado y desarrollado de punta a punta.</p>
         </div>
-        <div class="projects-grid">
-            <article class="project-card">
-                <div class="project-img-box">
-                    <img src="assets/img/mockup1.png" alt="Sistema Activo Fijo" loading="lazy">
-                    <span class="project-num" aria-hidden="true">01</span>
-                    <span class="project-cat"><i data-lucide="building-2" aria-hidden="true"></i>Sistema web</span>
-                </div>
-                <div class="project-body">
-                    <h3>Sistema de Gestión de Activo Fijo</h3>
-                    <p>Control de bienes, depreciación automática y reportes contables en PDF.</p>
-                    <div class="project-tech-tags" aria-label="Tecnologías utilizadas">
-                        <span class="tech" data-tech="php">PHP</span>
-                        <span class="tech" data-tech="laravel">Laravel</span>
-                        <span class="tech" data-tech="filament">Filament</span>
-                        <span class="tech" data-tech="mysql">MySQL</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="pages/activoFijo.html" class="btn-project primary">Ver detalles <i data-lucide="arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <div class="project-img-box">
-                    <img src="assets/img/mockup2.png" alt="Burguezza App" loading="lazy">
-                    <span class="project-num" aria-hidden="true">02</span>
-                    <span class="project-cat"><i data-lucide="smartphone" aria-hidden="true"></i>App móvil</span>
-                </div>
-                <div class="project-body">
-                    <h3>App Delivery (Burguezza)</h3>
-                    <p>App de pedidos a domicilio con API REST integrada y panel administrativo.</p>
-                    <div class="project-tech-tags" aria-label="Tecnologías utilizadas">
-                        <span class="tech" data-tech="php">PHP</span>
-                        <span class="tech" data-tech="laravel">Laravel</span>
-                        <span class="tech" data-tech="ionic">Ionic</span>
-                        <span class="tech" data-tech="mysql">MySQL</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="pages/appDelivery.html" class="btn-project primary">Ver detalles <i data-lucide="arrow-right" aria-hidden="true"></i></a>
-                        <a href="https://github.com/N0E2922/Laravel-Api" target="_blank" rel="noopener noreferrer" class="btn-project outline" aria-label="Ver código de App Delivery (Burguezza) en GitHub">
-                            <i data-lucide="github" aria-hidden="true"></i> Código
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <div class="project-img-box">
-                    <img src="assets/img/mockup3.png" alt="Sistema Restaurante" loading="lazy">
-                    <span class="project-num" aria-hidden="true">03</span>
-                    <span class="project-cat"><i data-lucide="utensils" aria-hidden="true"></i>Sistema web</span>
-                </div>
-                <div class="project-body">
-                    <h3>Sistema de Restaurante BURGUEZZA</h3>
-                    <p>Gestión de las operaciones administrativas y el servicio diario de un restaurante.</p>
-                    <div class="project-tech-tags" aria-label="Tecnologías utilizadas">
-                        <span class="tech" data-tech="php">PHP</span>
-                        <span class="tech" data-tech="laravel">Laravel</span>
-                        <span class="tech" data-tech="mysql">MySQL</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="pages/sistemacomida.html" class="btn-project primary">Ver detalles <i data-lucide="arrow-right" aria-hidden="true"></i></a>
-                        <a href="https://github.com/N0E2922/Sistema-de-Restaurante-Burguezza" target="_blank" rel="noopener noreferrer" class="btn-project outline" aria-label="Ver código de Sistema de Restaurante BURGUEZZA en GitHub">
-                            <i data-lucide="github" aria-hidden="true"></i> Código
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </div>
+        <div class="projects-grid" data-project-list></div>
     </div>
 </section>
 
@@ -415,6 +358,7 @@
     <p>© 2026 Noé Vladimir Meléndez Méndez | Software Developer</p>
 </footer>
 
+<script src="js/projects.js"></script>
 <script src="js/tech-icons.js"></script>
 <script src="js/main.js"></script>
 </body>
